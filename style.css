@@ -1,0 +1,107 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: rgb(255,255,255);
+    background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(0,0,255,1) 55%, rgba(255,255,255,1) 100%);
+
+}
+
+.list{
+    position: relative;
+    background: white;
+    width: 350px;
+
+}
+.list h2{
+    background: rgba(132, 132, 188, 0.828);
+    color: #020200;
+    padding: 10px 20px;
+    font-weight: 500;
+    text-align: center;
+}
+
+.list ul{
+    position: relative;
+    padding: 20px;
+}
+.list ul li{
+    position: relative;
+    padding: 15px 0;
+    list-style: none;
+    border-bottom: 1px solid rgba(0,0,0,0.3);
+}
+.list ul li:last-child{
+    border-bottom: none;
+    
+}
+.list ul li label{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
+
+.list ul li label input{
+    visibility: hidden;
+    appearance: none;
+
+}
+.list ul li label p{
+    position: absolute;
+
+}
+
+.list ul li label span{
+    position: relative;
+    width: 20px;
+    height: 20px;
+    border: 1px solid #ccc;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.list ul li label span::before{
+    content: '';
+    position: absolute;
+    top: 5px;
+    width: 10px;
+    height: 5px;
+    border-left: 2px solid #ccc;
+    border-bottom: 2px solid #ccc;
+    transform: rotate(-40deg);
+
+
+}
+
+.list ul li label input:checked ~ p{
+    text-decoration: line-through;
+    color: #ccc;
+    
+
+}
+.list ul li label input:checked ~ span{
+    background: rgba(132, 132, 188, 0.828);
+    border: 1px solid rgba(132, 132, 188, 0.828);
+
+
+}
+.list ul li label input:checked ~ span::before{
+
+    border-left: 2px solid #fff;
+    border-bottom: 2px solid #fff;
+    
+
+}
